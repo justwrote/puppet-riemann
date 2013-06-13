@@ -24,6 +24,6 @@ Uses templates to scaffold the services, so that it is easier to add further rie
 
 The epel module is only required if you are hosting on a RHEL flavored operating system.'
 dependency 'maestrodev/wget'
-dependency 'puppetlabs/stdlib', '~3.2.0'
+dependency 'puppetlabs/stdlib', '>=3.2.0'
 dependency 'stahnma/epel', '>=0.0.3'
 dependency 'puppetlabs/java'

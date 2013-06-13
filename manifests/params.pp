@@ -4,6 +4,8 @@ class riemann::params {
   $config_file_source   = ''
   $config_file_template = 'riemann/riemann.config.erb'
 
+  $install_prerequisites = true
+
   $port        = 5555
   $wsport      = 5556
   $host        = '0.0.0.0'

@@ -3,7 +3,9 @@ class riemann::package inherits riemann::params {
   $riemann_dir = $riemann::dir
   $use_pkg     = $riemann::use_pkg
 
-  ensure_packages($riemann::params::packages)
+  if $riemann::install_prerequisites {
+    ensure_packages($riemann::params::packages)
+  }
 
   class { 'wget': }
 

@@ -43,7 +43,9 @@ define riemann::utils::upconf(
   }
 
   if $ensure == 'present' {
-    Service[$title] { require +> File["/etc/init/$title.conf"] }
+    Service <| title == $title |> {
+      require +> File["/etc/init/$title.conf"],
+    }
   }
 
   file { "/etc/init.d/$title":

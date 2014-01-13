@@ -27,7 +27,7 @@ class riemann::package inherits riemann::params {
     }
 
     package { 'riemann':
-      ensure   => 'installed',
+      ensure   => latest,
       source   => "/tmp/$package_name",
       provider => $package_provider,
       require  => Wget::Fetch['download_riemann'],
